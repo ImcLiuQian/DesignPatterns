@@ -27,7 +27,7 @@ public class ColleagueTextField extends TextField implements TextListener, Colle
     }
 
     /**
-     * 当文字发生变化时，通知Mediator
+     * 当文字发生变化时，通知Mediator，通过监听器来实现
      * @param e
      */
     @Override

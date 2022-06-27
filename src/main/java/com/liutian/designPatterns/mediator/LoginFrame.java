@@ -84,13 +84,22 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
      * 判断各Colleague的启用/禁用状态
      */
     private void userpassChanged() {
-        if (textUser.getText().length() > 0) {
-
+        if (textUser.getText().length() > 4) {
+            textPass.setColleagueEnabled(true);
+            if (textPass.getText().length() > 4) {
+                buttonOK.setColleagueEnabled(true);
+            } else {
+                buttonOK.setColleagueEnabled(false);
+            }
+        } else {
+            textPass.setColleagueEnabled(false);
+            buttonOK.setColleagueEnabled(false);
         }
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        System.out.println(e);
+        System.exit(0);
     }
 }
